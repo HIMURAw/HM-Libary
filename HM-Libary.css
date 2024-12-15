@@ -1,13 +1,1093 @@
 /* ROOT */
 :root {
-  --white: #fff;
-  --black: #000000;
-  --red: #ff0000;
-  --yellow: #ffee00;
-  --green: #00ff0d;
   --pink: #f700ff;
   --purple: #2600ff;
   --blue: #0059ff;
   --midnightblue: #01a2ff;
   --orange: #ffc400;
+  --red: #ff0000;
+  --darkred: #8b0000;
+  --lightred: #ff6347;
+  --yellow: #ffff00;
+  --gold: #ffd700;
+  --green: #008000;
+  --lime: #00ff00;
+  --olive: #808000;
+  --teal: #008080;
+  --cyan: #00ffff;
+  --aqua: #7fffd4;
+  --skyblue: #87ceeb;
+  --lightblue: #add8e6;
+  --navy: #000080;
+  --indigo: #4b0082;
+  --violet: #ee82ee;
+  --magenta: #ff00ff;
+  --lavender: #e6e6fa;
+  --plum: #dda0dd;
+  --beige: #f5f5dc;
+  --tan: #d2b48c;
+  --brown: #a52a2a;
+  --chocolate: #d2691e;
+  --coral: #ff7f50;
+  --salmon: #fa8072;
+  --tomato: #ff6347;
+  --peach: #ffdab9;
+  --goldenrod: #daa520;
+  --khaki: #f0e68c;
+  --ivory: #fffff0;
+  --white: #ffffff;
+  --lightgray: #d3d3d3;
+  --gray: #808080;
+  --darkgray: #a9a9a9;
+  --black: #000000;
+  --charcoal: #36454f;
+  --slategray: #708090;
+  --silver: #c0c0c0;
+  --rose: #ff007f;
+  --crimson: #dc143c;
+  --maroon: #800000;
+  --burgundy: #800020;
+  --cerulean: #007ba7;
+  --turquoise: #40e0d0;
+  --mint: #98ff98;
+  --emerald: #50c878;
+  --forestgreen: #228b22;
+  --limegreen: #32cd32;
+  --seagreen: #2e8b57;
+  --springgreen: #00ff7f;
+  --chartreuse: #7fff00;
+  --honeydew: #f0fff0;
+  --mintcream: #f5fffa;
+  --aliceblue: #f0f8ff;
+  --powderblue: #b0e0e6;
+  --cadetblue: #5f9ea0;
+  --steelblue: #4682b4;
+  --royalblue: #4169e1;
+  --dodgerblue: #1e90ff;
+  --cornflowerblue: #6495ed;
+  --mediumblue: #0000cd;
+  --deepskyblue: #00bfff;
+  --midnightblue: #191970;
+  --orchid: #da70d6;
+  --thistle: #d8bfd8;
+  --fuchsia: #ff00ff;
+  --hotpink: #ff69b4;
+  --lightpink: #ffb6c1;
+  --mistyrose: #ffe4e1;
+  --seashell: #fff5ee;
+  --snow: #fffafa;
+  --linen: #faf0e6;
+  --antiquewhite: #faebd7;
+  --bisque: #ffe4c4;
+  --blanchedalmond: #ffebcd;
+  --wheat: #f5deb3;
+  --cornsilk: #fff8dc;
+  --lemonchiffon: #fffacd;
+  --palegoldenrod: #eee8aa;
+  --lightgoldenrodyellow: #fafad2;
+  --lightyellow: #ffffe0;
+  --pearl: #eae0c8;
+  --cream: #fffdd0;
+  --sand: #c2b280;
+  --sepia: #704214;
+  --copper: #b87333;
+  --bronze: #cd7f32;
+  --amber: #ffbf00;
+  --sunset: #ff4500;
+  --flamingo: #fc8eac;
+  --tangerine: #f28500;
+  --saffron: #f4c430;
+  --canary: #ffff99;
+  --amberyellow: #ffcc00;
+}
+
+/* BUTTON */
+
+.hm-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hm-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+}
+
+.hm-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.1s ease-in-out;
+}
+
+.hm-btn:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.hm-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 0, 255, 0.3);
+}
+
+/* BUTTON GRADİENT */
+.hm-btn-gradient {
+  background: linear-gradient(45deg, var(--pink), var(--purple));
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.hm-btn-gradient:hover {
+  background: linear-gradient(45deg, var(--blue), var(--orange));
+}
+
+/* BUTTON İCON */
+.hm-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hm-btn-icon i {
+  font-size: 18px;
+}
+
+/* BUTTON SHAKE */
+.hm-btn-shake:hover {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* BUTTON PROGRESSBAR */
+.hm-btn-progress {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.hm-btn-progress .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--green);
+  transition: width 1s ease;
+}
+
+.hm-btn-progress.loading .progress-bar {
+  width: 100%;
+}
+
+/* BUTTON COLOR */
+.hm-btn-pink {
+  background-color: var(--pink);
+}
+.hm-btn-purple {
+  background-color: var(--purple);
+}
+.hm-btn-blue {
+  background-color: var(--blue);
+}
+.hm-btn-midnightblue {
+  background-color: var(--midnightblue);
+}
+.hm-btn-orange {
+  background-color: var(--orange);
+}
+.hm-btn-red {
+  background-color: var(--red);
+}
+.hm-btn-darkred {
+  background-color: var(--darkred);
+}
+.hm-btn-lightred {
+  background-color: var(--lightred);
+}
+.hm-btn-yellow {
+  background-color: var(--yellow);
+}
+.hm-btn-gold {
+  background-color: var(--gold);
+}
+.hm-btn-green {
+  background-color: var(--green);
+}
+.hm-btn-lime {
+  background-color: var(--lime);
+}
+.hm-btn-olive {
+  background-color: var(--olive);
+}
+.hm-btn-teal {
+  background-color: var(--teal);
+}
+.hm-btn-cyan {
+  background-color: var(--cyan);
+}
+.hm-btn-aqua {
+  background-color: var(--aqua);
+}
+.hm-btn-skyblue {
+  background-color: var(--skyblue);
+}
+.hm-btn-lightblue {
+  background-color: var(--lightblue);
+}
+.hm-btn-navy {
+  background-color: var(--navy);
+}
+.hm-btn-indigo {
+  background-color: var(--indigo);
+}
+.hm-btn-violet {
+  background-color: var(--violet);
+}
+.hm-btn-magenta {
+  background-color: var(--magenta);
+}
+.hm-btn-lavender {
+  background-color: var(--lavender);
+}
+.hm-btn-plum {
+  background-color: var(--plum);
+}
+.hm-btn-beige {
+  background-color: var(--beige);
+}
+.hm-btn-tan {
+  background-color: var(--tan);
+}
+.hm-btn-brown {
+  background-color: var(--brown);
+}
+.hm-btn-chocolate {
+  background-color: var(--chocolate);
+}
+.hm-btn-coral {
+  background-color: var(--coral);
+}
+.hm-btn-salmon {
+  background-color: var(--salmon);
+}
+.hm-btn-tomato {
+  background-color: var(--tomato);
+}
+.hm-btn-peach {
+  background-color: var(--peach);
+}
+.hm-btn-goldenrod {
+  background-color: var(--goldenrod);
+}
+.hm-btn-khaki {
+  background-color: var(--khaki);
+}
+.hm-btn-ivory {
+  background-color: var(--ivory);
+}
+.hm-btn-white {
+  background-color: var(--white);
+}
+.hm-btn-lightgray {
+  background-color: var(--lightgray);
+}
+.hm-btn-gray {
+  background-color: var(--gray);
+}
+.hm-btn-darkgray {
+  background-color: var(--darkgray);
+}
+.hm-btn-black {
+  background-color: var(--black);
+}
+.hm-btn-charcoal {
+  background-color: var(--charcoal);
+}
+.hm-btn-slategray {
+  background-color: var(--slategray);
+}
+.hm-btn-silver {
+  background-color: var(--silver);
+}
+.hm-btn-rose {
+  background-color: var(--rose);
+}
+.hm-btn-crimson {
+  background-color: var(--crimson);
+}
+.hm-btn-maroon {
+  background-color: var(--maroon);
+}
+.hm-btn-burgundy {
+  background-color: var(--burgundy);
+}
+.hm-btn-cerulean {
+  background-color: var(--cerulean);
+}
+.hm-btn-turquoise {
+  background-color: var(--turquoise);
+}
+.hm-btn-mint {
+  background-color: var(--mint);
+}
+.hm-btn-emerald {
+  background-color: var(--emerald);
+}
+.hm-btn-forestgreen {
+  background-color: var(--forestgreen);
+}
+.hm-btn-limegreen {
+  background-color: var(--limegreen);
+}
+.hm-btn-seagreen {
+  background-color: var(--seagreen);
+}
+.hm-btn-springgreen {
+  background-color: var(--springgreen);
+}
+.hm-btn-chartreuse {
+  background-color: var(--chartreuse);
+}
+.hm-btn-honeydew {
+  background-color: var(--honeydew);
+}
+.hm-btn-mintcream {
+  background-color: var(--mintcream);
+}
+.hm-btn-aliceblue {
+  background-color: var(--aliceblue);
+}
+.hm-btn-powderblue {
+  background-color: var(--powderblue);
+}
+.hm-btn-cadetblue {
+  background-color: var(--cadetblue);
+}
+.hm-btn-steelblue {
+  background-color: var(--steelblue);
+}
+.hm-btn-royalblue {
+  background-color: var(--royalblue);
+}
+.hm-btn-dodgerblue {
+  background-color: var(--dodgerblue);
+}
+.hm-btn-cornflowerblue {
+  background-color: var(--cornflowerblue);
+}
+.hm-btn-mediumblue {
+  background-color: var(--mediumblue);
+}
+.hm-btn-deepskyblue {
+  background-color: var(--deepskyblue);
+}
+.hm-btn-midnightblue {
+  background-color: var(--midnightblue);
+}
+.hm-btn-orchid {
+  background-color: var(--orchid);
+}
+.hm-btn-thistle {
+  background-color: var(--thistle);
+}
+.hm-btn-fuchsia {
+  background-color: var(--fuchsia);
+}
+.hm-btn-hotpink {
+  background-color: var(--hotpink);
+}
+.hm-btn-lightpink {
+  background-color: var(--lightpink);
+}
+.hm-btn-mistyrose {
+  background-color: var(--mistyrose);
+}
+.hm-btn-seashell {
+  background-color: var(--seashell);
+}
+.hm-btn-snow {
+  background-color: var(--snow);
+}
+.hm-btn-linen {
+  background-color: var(--linen);
+}
+.hm-btn-antiquewhite {
+  background-color: var(--antiquewhite);
+}
+.hm-btn-bisque {
+  background-color: var(--bisque);
+}
+.hm-btn-blanchedalmond {
+  background-color: var(--blanchedalmond);
+}
+.hm-btn-wheat {
+  background-color: var(--wheat);
+}
+.hm-btn-cornsilk {
+  background-color: var(--cornsilk);
+}
+.hm-btn-lemonchiffon {
+  background-color: var(--lemonchiffon);
+}
+.hm-btn-palegoldenrod {
+  background-color: var(--palegoldenrod);
+}
+.hm-btn-lightgoldenrodyellow {
+  background-color: var(--lightgoldenrodyellow);
+}
+.hm-btn-lightyellow {
+  background-color: var(--lightyellow);
+}
+.hm-btn-pearl {
+  background-color: var(--pearl);
+}
+.hm-btn-cream {
+  background-color: var(--cream);
+}
+.hm-btn-sand {
+  background-color: var(--sand);
+}
+.hm-btn-sepia {
+  background-color: var(--sepia);
+}
+.hm-btn-copper {
+  background-color: var(--copper);
+}
+.hm-btn-bronze {
+  background-color: var(--bronze);
+}
+.hm-btn-amber {
+  background-color: var(--amber);
+}
+.hm-btn-sunset {
+  background-color: var(--sunset);
+}
+.hm-btn-flamingo {
+  background-color: var(--flamingo);
+}
+.hm-btn-tangerine {
+  background-color: var(--tangerine);
+}
+.hm-btn-saffron {
+  background-color: var(--saffron);
+}
+.hm-btn-canary {
+  background-color: var(--canary);
+}
+.hm-btn-amberyellow {
+  background-color: var(--amberyellow);
+}
+
+/* CARD */
+.hm-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hm-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hm-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.hm-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.hm-card-description {
+  font-size: 14px;
+  color: #555;
+}
+
+/* BACKGROUND */
+.hm-element-pink {
+  background-color: #f700ff;
+}
+.hm-element-purple {
+  background-color: #2600ff;
+}
+.hm-element-blue {
+  background-color: #0059ff;
+}
+.hm-element-midnightblue {
+  background-color: #01a2ff;
+}
+.hm-element-orange {
+  background-color: #ffc400;
+}
+.hm-element-red {
+  background-color: #ff5733;
+}
+.hm-element-lightgreen {
+  background-color: #33ff57;
+}
+.hm-element-lightgreen2 {
+  background-color: #57ff33;
+}
+.hm-element-pink2 {
+  background-color: #ff33a1;
+}
+.hm-element-lightblue {
+  background-color: #33a1ff;
+}
+.hm-element-red2 {
+  background-color: #ff5733;
+}
+.hm-element-lightgreen3 {
+  background-color: #33ff77;
+}
+.hm-element-darkred {
+  background-color: #f70000;
+}
+.hm-element-darkorange {
+  background-color: #ff7f00;
+}
+.hm-element-yellow {
+  background-color: #ffff00;
+}
+.hm-element-lightyellow {
+  background-color: #7fff00;
+}
+.hm-element-green {
+  background-color: #00ff00;
+}
+.hm-element-teal {
+  background-color: #00ff7f;
+}
+.hm-element-cyan {
+  background-color: #00ffff;
+}
+.hm-element-lightblue2 {
+  background-color: #007fff;
+}
+.hm-element-magenta {
+  background-color: #ff00ff;
+}
+.hm-element-pink3 {
+  background-color: #ff007f;
+}
+.hm-element-pink4 {
+  background-color: #ff3366;
+}
+.hm-element-lightblue3 {
+  background-color: #3399ff;
+}
+.hm-element-lightcyan {
+  background-color: #00ccff;
+}
+.hm-element-darkyellow {
+  background-color: #ffcc00;
+}
+.hm-element-lightpink {
+  background-color: #ff99cc;
+}
+.hm-element-lavender {
+  background-color: #9966ff;
+}
+.hm-element-lightteal {
+  background-color: #00ffcc;
+}
+.hm-element-pink5 {
+  background-color: #ff3399;
+}
+.hm-element-lightblue4 {
+  background-color: #33ccff;
+}
+.hm-element-red3 {
+  background-color: #ff0033;
+}
+.hm-element-green2 {
+  background-color: #00ff99;
+}
+.hm-element-pink6 {
+  background-color: #ff3366;
+}
+.hm-element-indigo {
+  background-color: #6633ff;
+}
+.hm-element-peach {
+  background-color: #ff9966;
+}
+.hm-element-rose {
+  background-color: #ff6699;
+}
+.hm-element-coral {
+  background-color: #ff6600;
+}
+.hm-element-lime {
+  background-color: #33ff66;
+}
+.hm-element-lightred {
+  background-color: #ff6666;
+}
+.hm-element-seafoam {
+  background-color: #33ff99;
+}
+.hm-element-neon {
+  background-color: #00ff66;
+}
+.hm-element-chartreuse {
+  background-color: #66ff00;
+}
+.hm-element-lightred2 {
+  background-color: #ff6666;
+}
+.hm-element-pink7 {
+  background-color: #ff00cc;
+}
+.hm-element-pink8 {
+  background-color: #ff3399;
+}
+.hm-element-crimson {
+  background-color: #ff0000;
+}
+.hm-element-purple2 {
+  background-color: #9900cc;
+}
+.hm-element-orange2 {
+  background-color: #ff6600;
+}
+.hm-element-pink9 {
+  background-color: #ff0066;
+}
+.hm-element-violet {
+  background-color: #cc00cc;
+}
+.hm-element-pink10 {
+  background-color: #ff3300;
+}
+.hm-element-lightblue5 {
+  background-color: #3399cc;
+}
+.hm-element-lavender2 {
+  background-color: #cc66ff;
+}
+.hm-element-darkcyan {
+  background-color: #006666;
+}
+.hm-element-lightgreen4 {
+  background-color: #99ff66;
+}
+.hm-element-lightyellow2 {
+  background-color: #ffff66;
+}
+.hm-element-peach2 {
+  background-color: #ff9966;
+}
+.hm-element-lightgreen5 {
+  background-color: #66ff33;
+}
+.hm-element-skyblue {
+  background-color: #66ccff;
+}
+.hm-element-darkpink {
+  background-color: #ff0066;
+}
+.hm-element-darkyellow2 {
+  background-color: #ffcc66;
+}
+.hm-element-blue2 {
+  background-color: #0033cc;
+}
+.hm-element-lightorange {
+  background-color: #ff9966;
+}
+.hm-element-pink11 {
+  background-color: #ff0099;
+}
+.hm-element-green3 {
+  background-color: #66ff99;
+}
+.hm-element-lightpurple {
+  background-color: #cc99ff;
+}
+.hm-element-lightcyan2 {
+  background-color: #66ffff;
+}
+.hm-element-lightblue6 {
+  background-color: #99ccff;
+}
+.hm-element-lightpink2 {
+  background-color: #ff66cc;
+}
+.hm-element-darkblue {
+  background-color: #003366;
+}
+.hm-element-lightgreen6 {
+  background-color: #99ff33;
+}
+.hm-element-sunset {
+  background-color: #ff6600;
+}
+.hm-element-blue3 {
+  background-color: #0066ff;
+}
+.hm-element-lightorange2 {
+  background-color: #ff6600;
+}
+.hm-element-darkgreen {
+  background-color: #006600;
+}
+.hm-element-yellow2 {
+  background-color: #ffcc00;
+}
+.hm-element-lightyellow3 {
+  background-color: #ffff99;
+}
+.hm-element-lightblue7 {
+  background-color: #66ccff;
+}
+.hm-element-lightgreen7 {
+  background-color: #66ff66;
+}
+.hm-element-lightblue8 {
+  background-color: #99ccff;
+}
+.hm-element-pink12 {
+  background-color: #ff33cc;
+}
+.hm-element-lightred3 {
+  background-color: #ff6666;
+}
+.hm-element-coral2 {
+  background-color: #ff9966;
+}
+.hm-element-lightpurple2 {
+  background-color: #cc66ff;
+}
+.hm-element-lightteal2 {
+  background-color: #66ffff;
+}
+
+/* ELEMENT POSİTİON */
+.hm-element-top {
+  background-position: top center;
+}
+
+.hm-element-bottom {
+  background-position: bottom center;
+}
+
+.hm-element-left {
+  background-position: left center;
+}
+
+.hm-element-right {
+  background-position: right center;
+}
+
+/* BACKGROUND GRADİEND */
+.hm-element-gradient-pink-purple {
+  background: linear-gradient(to right, #f700ff, #2600ff);
+}
+.hm-element-gradient-blue-green {
+  background: linear-gradient(to right, #0059ff, #33ff57);
+}
+.hm-element-gradient-orange-yellow {
+  background: linear-gradient(to right, #ffc400, #ffff00);
+}
+.hm-element-gradient-red-pink {
+  background: linear-gradient(to right, #ff5733, #ff33a1);
+}
+.hm-element-gradient-lightblue-lightgreen {
+  background: linear-gradient(to right, #33a1ff, #57ff33);
+}
+.hm-element-gradient-cyan-teal {
+  background: linear-gradient(to right, #00ffff, #00ff7f);
+}
+.hm-element-gradient-lightcyan-lightblue {
+  background: linear-gradient(to right, #66ffff, #3399ff);
+}
+.hm-element-gradient-indigo-rose {
+  background: linear-gradient(to right, #6633ff, #ff6699);
+}
+.hm-element-gradient-lime-seafoam {
+  background: linear-gradient(to right, #66ff00, #33ff99);
+}
+.hm-element-gradient-peach-lightpink {
+  background: linear-gradient(to right, #ff9966, #ff66cc);
+}
+.hm-element-gradient-violet-lightgreen {
+  background: linear-gradient(to right, #9966ff, #33ff66);
+}
+.hm-element-gradient-pink-orange {
+  background: linear-gradient(to right, #ff00cc, #ff6600);
+}
+.hm-element-gradient-pink-lightblue {
+  background: linear-gradient(to right, #ff3366, #33ccff);
+}
+.hm-element-gradient-lightgreen-lightyellow {
+  background: linear-gradient(to right, #99ff66, #ffff66);
+}
+.hm-element-gradient-darkred-darkorange {
+  background: linear-gradient(to right, #f70000, #ff7f00);
+}
+.hm-element-gradient-darkblue-lightcyan {
+  background: linear-gradient(to right, #003366, #00ccff);
+}
+.hm-element-gradient-teal-lightgreen {
+  background: linear-gradient(to right, #00ff7f, #66ff33);
+}
+.hm-element-gradient-darkgreen-lightyellow {
+  background: linear-gradient(to right, #006600, #ffcc00);
+}
+.hm-element-gradient-darkpurple-lightgreen {
+  background: linear-gradient(to right, #9900cc, #66ff00);
+}
+.hm-element-gradient-lightpink-lightorange {
+  background: linear-gradient(to right, #ff99cc, #ff9966);
+}
+.hm-element-gradient-lightblue-darkblue {
+  background: linear-gradient(to right, #3399cc, #0033cc);
+}
+.hm-element-gradient-lightred-lightgreen {
+  background: linear-gradient(to right, #ff6666, #66ff99);
+}
+.hm-element-gradient-lightpurple-coral {
+  background: linear-gradient(to right, #cc66ff, #ff6600);
+}
+.hm-element-gradient-pink-peach {
+  background: linear-gradient(to right, #ff33cc, #ff9966);
+}
+.hm-element-gradient-pink-lightyellow {
+  background: linear-gradient(to right, #ff33a1, #ffff00);
+}
+.hm-element-gradient-lightgreen-lightpink {
+  background: linear-gradient(to right, #33ff66, #ff99cc);
+}
+.hm-element-gradient-lightcyan-lightblue2 {
+  background: linear-gradient(to right, #66ffff, #3399cc);
+}
+.hm-element-gradient-coral-lightgreen {
+  background: linear-gradient(to right, #ff9966, #33ff77);
+}
+.hm-element-gradient-lavender-lightyellow {
+  background: linear-gradient(to right, #9966ff, #ffff66);
+}
+.hm-element-gradient-darkpink-lightgreen {
+  background: linear-gradient(to right, #ff0066, #66ff66);
+}
+.hm-element-gradient-lightorange-lightgreen {
+  background: linear-gradient(to right, #ff9966, #66ff00);
+}
+.hm-element-gradient-darkyellow-lightblue {
+  background: linear-gradient(to right, #ffcc00, #33ccff);
+}
+.hm-element-gradient-lightgreen-lightred {
+  background: linear-gradient(to right, #66ff33, #ff6666);
+}
+.hm-element-gradient-teal-lightpink {
+  background: linear-gradient(to right, #00ff7f, #ff66cc);
+}
+.hm-element-gradient-lightblue-lightgreen2 {
+  background: linear-gradient(to right, #3399ff, #33ff66);
+}
+.hm-element-gradient-orange-lightgreen {
+  background: linear-gradient(to right, #ff6600, #66ff33);
+}
+.hm-element-gradient-lightcyan-lightred {
+  background: linear-gradient(to right, #66ffff, #ff6666);
+}
+.hm-element-gradient-lightyellow-lightblue {
+  background: linear-gradient(to right, #ffff66, #3399cc);
+}
+.hm-element-gradient-lightpink-lightyellow {
+  background: linear-gradient(to right, #ff66cc, #ffff66);
+}
+.hm-element-gradient-lightpurple-pink {
+  background: linear-gradient(to right, #9966ff, #ff3366);
+}
+.hm-element-gradient-lightblue-lightorange {
+  background: linear-gradient(to right, #33ccff, #ff9966);
+}
+.hm-element-gradient-peach-lightgreen {
+  background: linear-gradient(to right, #ff9966, #66ff66);
+}
+.hm-element-gradient-darkgreen-lightcyan {
+  background: linear-gradient(to right, #006600, #00ccff);
+}
+.hm-element-gradient-pink-darkblue {
+  background: linear-gradient(to right, #ff3366, #0033cc);
+}
+.hm-element-gradient-lightgreen-darkyellow {
+  background: linear-gradient(to right, #66ff66, #ffcc00);
+}
+.hm-element-gradient-lightred-darkpink {
+  background: linear-gradient(to right, #ff6666, #ff0066);
+}
+.hm-element-gradient-lightblue-lightteal {
+  background: linear-gradient(to right, #3399ff, #00ff7f);
+}
+.hm-element-gradient-lightyellow-lightgreen2 {
+  background: linear-gradient(to right, #ffff66, #66ff33);
+}
+.hm-element-gradient-lightcyan-lightpink2 {
+  background: linear-gradient(to right, #66ffff, #ff99cc);
+}
+.hm-element-gradient-coral-lightblue {
+  background: linear-gradient(to right, #ff6600, #3399cc);
+}
+.hm-element-gradient-darkyellow-lightgreen {
+  background: linear-gradient(to right, #ffcc00, #33ff66);
+}
+.hm-element-gradient-lightblue-darkred {
+  background: linear-gradient(to right, #33ccff, #f70000);
+}
+.hm-element-gradient-lightgreen-darkblue {
+  background: linear-gradient(to right, #66ff33, #0033cc);
+}
+.hm-element-gradient-teal-darkpink {
+  background: linear-gradient(to right, #00ff7f, #ff0066);
+}
+.hm-element-gradient-lightorange-lightpink {
+  background: linear-gradient(to right, #ff9966, #ff66cc);
+}
+.hm-element-gradient-lightgreen-lightpurple {
+  background: linear-gradient(to right, #66ff33, #9966ff);
+}
+.hm-element-gradient-lightcyan-lightgreen {
+  background: linear-gradient(to right, #66ffff, #33ff66);
+}
+.hm-element-gradient-darkgreen-lightblue {
+  background: linear-gradient(to right, #006600, #3399cc);
+}
+.hm-element-gradient-lightyellow-lightred {
+  background: linear-gradient(to right, #ffff66, #ff6666);
+}
+.hm-element-gradient-lightpink-lightblue {
+  background: linear-gradient(to right, #ff66cc, #33ccff);
+}
+.hm-element-gradient-lightgreen-lightorange {
+  background: linear-gradient(to right, #66ff33, #ff9966);
+}
+.hm-element-gradient-lightcyan-lightpurple {
+  background: linear-gradient(to right, #66ffff, #9966ff);
+}
+.hm-element-gradient-darkyellow-lightpink {
+  background: linear-gradient(to right, #ffcc00, #ff66cc);
+}
+.hm-element-gradient-lightblue-lightteal2 {
+  background: linear-gradient(to right, #33ccff, #00ff7f);
+}
+.hm-element-gradient-darkgreen-lightyellow {
+  background: linear-gradient(to right, #006600, #ffff66);
+}
+.hm-element-gradient-lightgreen-lightcyan {
+  background: linear-gradient(to right, #66ff33, #66ffff);
+}
+.hm-element-gradient-darkblue-lightgreen {
+  background: linear-gradient(to right, #0033cc, #33ff66);
+}
+.hm-element-gradient-darkred-lightorange {
+  background: linear-gradient(to right, #f70000, #ff9966);
+}
+.hm-element-gradient-lightblue-lightyellow2 {
+  background: linear-gradient(to right, #33ccff, #ffff66);
+}
+.hm-element-gradient-lightpink-lightcyan {
+  background: linear-gradient(to right, #ff66cc, #66ffff);
+}
+.hm-element-gradient-lightgreen-darkpink {
+  background: linear-gradient(to right, #66ff33, #ff0066);
+}
+.hm-element-gradient-lightyellow-lightorange {
+  background: linear-gradient(to right, #ffff66, #ff9966);
+}
+.hm-element-gradient-lightblue-lightgreen3 {
+  background: linear-gradient(to right, #3399cc, #66ff33);
+}
+.hm-element-gradient-lightcyan-darkblue {
+  background: linear-gradient(to right, #66ffff, #0033cc);
+}
+.hm-element-gradient-lightred-lightteal {
+  background: linear-gradient(to right, #ff6666, #00ff7f);
+}
+.hm-element-gradient-lightgreen-lightblue {
+  background: linear-gradient(to right, #66ff33, #33ccff);
+}
+.hm-element-gradient-lightpurple-lightgreen {
+  background: linear-gradient(to right, #9966ff, #66ff33);
+}
+.hm-element-gradient-lightpink-lightgreen2 {
+  background: linear-gradient(to right, #ff66cc, #33ff66);
+}
+.hm-element-gradient-darkblue-lightred {
+  background: linear-gradient(to right, #0033cc, #ff6666);
+}
+.hm-element-gradient-lightgreen-darkred {
+  background: linear-gradient(to right, #66ff33, #f70000);
+}
+.hm-element-gradient-lightblue-lightcyan2 {
+  background: linear-gradient(to right, #33ccff, #66ffff);
+}
+.hm-element-gradient-lightgreen-darkyellow {
+  background: linear-gradient(to right, #66ff33, #ffcc00);
+}
+.hm-element-gradient-lightyellow-darkblue {
+  background: linear-gradient(to right, #ffff66, #0033cc);
+}
+.hm-element-gradient-lightcyan-lightyellow2 {
+  background: linear-gradient(to right, #66ffff, #ffff66);
+}
+.hm-element-gradient-darkpink-lightblue {
+  background: linear-gradient(to right, #ff0066, #33ccff);
+}
+.hm-element-gradient-lightgreen-lightpurple2 {
+  background: linear-gradient(to right, #66ff33, #9966ff);
+}
+.hm-element-gradient-lightyellow-lightteal {
+  background: linear-gradient(to right, #ffff66, #00ff7f);
+}
+.hm-element-gradient-lightcyan-lightred2 {
+  background: linear-gradient(to right, #66ffff, #ff6666);
+}
+.hm-element-gradient-lightblue-darkgreen {
+  background: linear-gradient(to right, #33ccff, #006600);
+}
+.hm-element-gradient-lightgreen-lightblue2 {
+  background: linear-gradient(to right, #66ff33, #3399cc);
+}
+.hm-element-gradient-darkgreen-lightpurple {
+  background: linear-gradient(to right, #006600, #9966ff);
+}
+.hm-element-gradient-lightyellow-lightpink2 {
+  background: linear-gradient(to right, #ffff66, #ff66cc);
+}
+.hm-element-gradient-lightblue-lightorange2 {
+  background: linear-gradient(to right, #33ccff, #ff9966);
 }
