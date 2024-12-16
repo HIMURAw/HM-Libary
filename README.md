@@ -1,5 +1,16 @@
 # CSS Library
 
+## Installation
+
+You can integrate this CSS library into your project by following one of these methods:
+
+### Option 1: Using CDN
+To use the library via CDN, simply add the following `<link>` tag to the `<head>` section of your HTML:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hm-css/dist/library.min.css">
+```
+
 This project is a customizable and modern CSS library designed to help web developers quickly and easily style their websites. It includes a variety of pre-designed components such as buttons, cards, backgrounds, animations, and more. The library is lightweight, easy to integrate, and customizable, making it a great tool for any web project.
 
 ## Table of Contents
@@ -25,12 +36,27 @@ This CSS library offers a collection of essential styles for modern web developm
 - **Responsiveness**: The library is designed to be mobile-friendly and adaptable to various screen sizes.
 - **Easy Customization**: Variables for colors, sizes, and other properties are provided for easy adjustments.
 
-## Installation
+# Grid System - col-md
 
-You can integrate this CSS library into your project by following one of these methods:
+This grid system is designed to provide responsive layouts using 12 columns. The `col-md-` class is used for medium-sized devices, typically tablets or devices with a screen width of 768px and above.
 
-### Option 1: Using CDN
-To use the library via CDN, simply add the following `<link>` tag to the `<head>` section of your HTML:
+## Features
+
+- The `col-md-` class applies when the screen width is **768px** or larger.
+- The grid is based on a **12-column** layout.
+- You can specify the width of each column for medium-sized devices using classes like `col-md-1`, `col-md-2`, etc., where the number corresponds to the number of columns the element should span.
+
+## Usage
+
+### HTML Structure
+
+To use the `col-md-` class, simply add it to the column element inside a `.row` container. This will apply the grid system for medium-sized devices.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hm-css/dist/library.min.css">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">Column 1</div>
+    <div class="col-md-4">Column 2</div>
+    <div class="col-md-4">Column 3</div>
+  </div>
+</div>
