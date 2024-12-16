@@ -38,25 +38,25 @@ This CSS library offers a collection of essential styles for modern web developm
 
 # Grid System - col-md
 
-This grid system is designed to provide responsive layouts using 12 columns. The `col-md-` class is used for medium-sized devices, typically tablets or devices with a screen width of 768px and above.
+This grid system is designed to provide responsive layouts using 12 columns. The `hm-col-md-` class is used for medium-sized devices, typically tablets or devices with a screen width of 768px and above.
 
 ## Features
 
 - The `col-md-` class applies when the screen width is **768px** or larger.
 - The grid is based on a **12-column** layout.
-- You can specify the width of each column for medium-sized devices using classes like `col-md-1`, `col-md-2`, etc., where the number corresponds to the number of columns the element should span.
+- You can specify the width of each column for medium-sized devices using classes like `hm-col-md-1`, `hm-col-md-2`, etc., where the number corresponds to the number of columns the element should span.
 
 ## Usage
 
 ### HTML Structure
 
-To use the `col-md-` class, simply add it to the column element inside a `.row` container. This will apply the grid system for medium-sized devices.
+To use the `hm-col-md-` class, simply add it to the column element inside a `.hm-row` container. This will apply the grid system for medium-sized devices.
 
 ```html
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">Column 1</div>
-    <div class="col-md-4">Column 2</div>
-    <div class="col-md-4">Column 3</div>
+<div class="hm-container">
+  <div class="hm-row">
+    <div class="hm-col-md-4">Column 1</div>
+    <div class="hm-col-md-4">Column 2</div>
+    <div class="hm-col-md-4">Column 3</div>
   </div>
 </div>
