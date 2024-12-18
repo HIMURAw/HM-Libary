@@ -60,3 +60,15 @@ To use the `hm-col-md-` class, simply add it to the column element inside a `.hm
     <div class="hm-col-md-4">Column 3</div>
   </div>
 </div>
+
+## Input Styles
+
+This library includes a variety of customizable input styles to enhance the user experience. You can easily integrate these input designs into your forms to make them more visually appealing and interactive.
+
+### Available Input Styles
+
+1. **Basic Input**: A simple input field with a border and padding.
+   ```html
+   <input type="text" class="hm-input" placeholder="Enter text">
+   <input type="text" class="hm-input-under" placeholder="Enter text">
+   <input type="text" class="hm-input-gradient-border" placeholder="Enter text">

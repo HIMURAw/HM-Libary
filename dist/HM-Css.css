@@ -1191,3 +1191,156 @@
   .hm-col-xl-11 { flex: 0 0 91.66%; max-width: 91.66%; }
   .hm-col-xl-12 { flex: 0 0 100%; max-width: 100%; }
 }
+
+/* UPDATE 1.0.2 */
+
+/* İNPUT */
+.hm-input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hm-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.hm-input-trans {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--primary-color);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.hm-input-trans:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  background-color: rgba(52, 152, 219, 0.438); /* Hafif bir arka plan */
+}
+
+.hm-input-under {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  transition: border-color 0.3s ease;
+}
+.hm-input-under:focus {
+  outline: none;
+  border-bottom-color: var(--secondary-color);
+}
+
+
+.hm-input-roun {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--primary-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.hm-input-roun:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+}
+
+.hm-input-gradient-border {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid;
+  border-image-source: linear-gradient(45deg, #3498db, #9b59b6);
+  border-image-slice: 1;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+.hm-input-gradient-border:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.hm-input-shadow-border {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background: transparent;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.hm-input-shadow-border:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+/* ANİMATİON  İCON */
+
+.hm-input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.hm-input-group .hm-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.hm-input-group label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: 0.3s ease all;
+  pointer-events: none;
+}
+.hm-input-group .hm-input:focus + label,
+.hm-input-group .hm-input:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+/* İCON İNPUT */
+
+.hm-input-icon {
+  position: relative;
+}
+.hm-input-icon .hm-input {
+  padding-left: 35px;
+}
+.hm-input-icon i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+.hm-input::placeholder {
+  color: #aaa;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+.hm-input:focus::placeholder {
+  color: #ccc;
+}
