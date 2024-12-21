@@ -1,0 +1,16 @@
+{
+    "name": "hm-css",
+    "version": "1.0.5",
+    "description": "A CSS library for styling your projects.",
+    "main": "dist/HM-Css.min.css",
+    "style": "dist/HM-Css.min.css",
+    "files": [
+        "dist/HM-Css.min.css"
+      ],
+    "author": "HIMURA",
+    "license": "MIT",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": []
+}

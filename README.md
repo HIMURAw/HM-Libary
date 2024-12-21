@@ -8,7 +8,7 @@ You can integrate this CSS library into your project by following one of these m
 To use the library via CDN, simply add the following `<link>` tag to the `<head>` section of your HTML:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hm-css/dist/library.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hm-css/dist/HM-Css.min.css">
 ```
 
 This project is a customizable and modern CSS library designed to help web developers quickly and easily style their websites. It includes a variety of pre-designed components such as buttons, cards, backgrounds, animations, and more. The library is lightweight, easy to integrate, and customizable, making it a great tool for any web project.
